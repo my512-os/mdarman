@@ -588,7 +588,12 @@ footer {
 }
 @media(max-width:700px) {
   nav { padding:1rem 5%; }
-  .nav-links { display:none; }
+.nav-links {
+    display:none;
+  }
+  .contact-form div[style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns:1fr !important;
+  }
   .hero { padding:7rem 5% 3rem; }
   section { padding:4rem 5%; }
   .hero-stats { gap:1.5rem; }
