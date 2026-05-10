@@ -601,6 +601,55 @@ footer {
 .nav-links {
     display:none;
   }
+  .hamburger {
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+    padding:5px;
+  }
+  .hamburger span {
+    width:25px; height:2px;
+    background:var(--cyan);
+    display:block;
+    transition:all .3s;
+  }
+  .mobile-menu {
+    display:none;
+    position:fixed;
+    top:60px; left:0; right:0;
+    background:rgba(10,11,16,.98);
+    padding:1.5rem;
+    z-index:499;
+    border-bottom:1px solid var(--border);
+    flex-direction:column;
+    gap:1.2rem;
+  }
+  .mobile-menu.open { display:flex; }
+  .mobile-menu a {
+    color:var(--text);
+    text-decoration:none;
+    font-size:1rem;
+    font-weight:600;
+    padding:.5rem 0;
+    border-bottom:1px solid var(--border);
+  }
+  .mobile-menu a:last-child { border:none; }
+  .hero-photo {
+    position:relative;
+    top:auto; right:auto;
+    transform:none;
+    width:200px; height:200px;
+    margin:2rem auto 0;
+  }
+  .hero-photo-info {
+    position:relative;
+    top:auto; right:auto;
+    width:100%;
+    margin-top:1rem;
+    text-align:center;
+  }
+  }
   .contact-form div[style*="grid-template-columns:1fr 1fr"] {
     grid-template-columns:1fr !important;
   }
