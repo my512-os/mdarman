@@ -721,7 +721,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="https://www.linkedin.com/in/mdarmani/" style="color:var(--muted);font-size:1rem;transition:color .2s;" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--muted)'"><i class="fab fa-linkedin-in"></i></a>
   </div>
 </div>
-  <ul class="nav-links">
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" style="display:none;background:none;border:none;">
+  <span></span><span></span><span></span>
+</button>
+<ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#portfolio">Portfolio</a></li>
@@ -730,6 +733,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li><a href="https://calendly.com/armanim186/30min" target="_blank" class="nav-cta" style="background:#00d4ff;color:#000;margin-left:.5rem;">Book a Consultation</a></li>
   </ul>
 </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#portfolio" onclick="toggleMenu()">Portfolio</a>
+  <a href="#work" onclick="toggleMenu()">Results</a>
+  <a href="https://calendly.com/armanim186/30min" target="_blank" onclick="toggleMenu()">Book a Consultation</a>
+  <a href="#contact" onclick="toggleMenu()" style="color:var(--cyan);">Let's Talk</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -1437,6 +1449,22 @@ window.addEventListener('scroll', () => {
   document.getElementById('navbar').style.borderBottomColor =
     window.scrollY > 40 ? 'rgba(255,255,255,.1)' : 'var(--border)';
 });
+
+  function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+window.addEventListener('resize', () => {
+  const hamburger = document.getElementById('hamburger');
+  if(window.innerWidth <= 768) {
+    hamburger.style.display = 'flex';
+  } else {
+    hamburger.style.display = 'none';
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+});
+window.dispatchEvent(new Event('resize'));
+
+  
 </script>
 <a href="https://wa.me/8801321869405" target="_blank" style="
   position:fixed;
