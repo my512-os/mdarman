@@ -655,59 +655,22 @@ footer {
   border-radius:50%;
   overflow:hidden;
   border:3px solid var(--cyan);
-  box-shadow:0 0 60px rgba(0,212,255,0.3);
-}
-@media(max-width:768px) {
-  .hero {
-    flex-direction:column;
-    padding-top:6rem;
-    text-align:center;
-  }
-  .hero-photo {
-    position:relative;
-    top:auto;
-    right:auto;
-    transform:none;
-    width:220px;
-    height:220px;
-    margin:2rem auto 0;
-  }
- .hero-photo-info {
-    position:relative;
-    top:auto;
-    right:auto;
-    width:100%;
-    margin-top:1rem;
-    text-align:center;
-    order:3;
-  }
-  .hero-photo {
-    order:2;
-  }
-  .hero-content {
-    order:1;
-  }
+  box-shadow:0 0 30px rgba(0,212,255,0.4), 0 0 60px rgba(0,212,255,0.2);
+  animation:photoPulse 2.5s ease-in-out infinite;
 }
 .hero-photo img {
   width:100%;
   height:100%;
   object-fit:cover;
 }
-
-.hero-photo {
-  box-shadow: 0 0 30px rgba(0,212,255,0.4),
-              0 0 60px rgba(0,212,255,0.2);
-  animation: photoPulse 2.5s ease-in-out infinite;
-}
 @keyframes photoPulse {
-  0%,100% { box-shadow: 0 0 30px rgba(0,212,255,0.4), 0 0 60px rgba(0,212,255,0.2); }
-  50%      { box-shadow: 0 0 50px rgba(0,212,255,0.7), 0 0 100px rgba(0,212,255,0.4); }
+  0%,100% { box-shadow:0 0 30px rgba(0,212,255,0.4), 0 0 60px rgba(0,212,255,0.2); }
+  50% { box-shadow:0 0 50px rgba(0,212,255,0.7), 0 0 100px rgba(0,212,255,0.4); }
 }
 .hero-photo-info {
   position:absolute;
   right:5%;
   top:calc(50% + 210px);
-  transform:translateX(0);
   text-align:center;
   width:380px;
 }
@@ -726,6 +689,38 @@ footer {
 .hero-photo-info .location {
   font-size:.8rem;
   color:var(--muted);
+}
+@media(max-width:768px) {
+  .hero {
+    flex-direction:column;
+    padding-top:6rem;
+    text-align:center;
+    min-height:auto;
+  }
+  .hero-photo {
+    position:relative !important;
+    top:auto !important;
+    right:auto !important;
+    transform:none !important;
+    width:220px !important;
+    height:220px !important;
+    margin:2rem auto 0 !important;
+    animation:none !important;
+  }
+  .hero-photo-info {
+    position:relative !important;
+    top:auto !important;
+    right:auto !important;
+    width:100% !important;
+    margin-top:1rem !important;
+    text-align:center !important;
+  }
+  .hero-stats {
+    justify-content:center;
+  }
+  .hero-actions {
+    justify-content:center;
+  }
 }
 .neon-card-inner {
   align-items: center;
