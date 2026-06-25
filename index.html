@@ -739,6 +739,17 @@ footer {
   }
 }
 
+@keyframes tickerScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@media(max-width:768px) {
+  @keyframes tickerScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+}
+  
   
 </style>
 </head>
@@ -811,6 +822,91 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <span>Meta Ads & Tracking Specialist</span>
   <span class="location">📍 Dhaka, Bangladesh</span>
 </div>
+
+  <!-- LOGO TICKER -->
+<div style="background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.2rem 0;overflow:hidden;position:relative;">
+  <!-- fade edges -->
+  <div style="position:absolute;left:0;top:0;bottom:0;width:80px;background:linear-gradient(to right,var(--dark2),transparent);z-index:2;pointer-events:none;"></div>
+  <div style="position:absolute;right:0;top:0;bottom:0;width:80px;background:linear-gradient(to left,var(--dark2),transparent);z-index:2;pointer-events:none;"></div>
+
+  <div style="display:flex;animation:tickerScroll 28s linear infinite;width:max-content;">
+    <!-- First set -->
+    <div style="display:flex;align-items:center;gap:2.5rem;padding-right:2.5rem;">
+      <div style="display:flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.85rem;font-weight:600;white-space:nowrap;">
+        <img src="https://cdn.simpleicons.org/meta/00d4ff" style="width:20px;height:20px;filter:brightness(0) invert(1);opacity:.7;"> Meta Ads
+      </div>
+      <div style="display:flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.85rem;font-weight:600;white-space:nowrap;">
+        <img src="https://cdn.simpleicons.org/googletagmanager/00d4ff" style="width:20px;height:20px;"> Google Tag Manager
+      </div>
+      <div style="display:flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.85rem;font-weight:600;white-space:nowrap;">
+        <img src="https://cdn.simpleicons.org/googleanalytics/00d4ff" style="width:20px;height:20px;"> Google Analytics 4
+      </div>
+      <div style="display:flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.85rem;font-weight:600;white-space:nowrap;">
+        <img src="https://cdn.simpleicons.org/googleads/00d4ff" style="width:20px;height:20px;"> Google Ads
+      </div>
+      <div style="display:flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.85rem;font-weight:600;white-space:nowrap;">
+        <img src="https://cdn.simpleicons.org/shopify/00d4ff" style="width:20px;height:20px;"> Shopify
+      </div>
+      <div style="display:flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.85rem;font-weight:600;white-space:nowrap;">
+        <img src="https://cdn.simpleicons.org/woocommerce/00d4ff" style="width:20px;height:20px;"> WooCommerce
+      </div>
+      <div style="display:flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.85rem;font-weight:600;white-space:nowrap;">
+        <img src="https://cdn.simpleicons.org/looker/00d4ff" style="width:20px;height:20px;"> Looker Studio
+      </div>
+      <div style="display:flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.85rem;font-weight:600;white-space:nowrap;">
+        <span style="font-size:1rem;">⚡</span> Conversions API
+      </div>
+      <div style="display:flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.85rem;font-weight:600;white-space:nowrap;">
+        <span style="font-size:1rem;">🌐</span> Stape.io
+      </div>
+      <div style="display:flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.85rem;font-weight:600;white-space:nowrap;">
+        <span style="font-size:1rem;">🎯</span> Advantage+
+      </div>
+      <div style="display:flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.85rem;font-weight:600;white-space:nowrap;">
+        <span style="font-size:1rem;">📋</span> GoHighLevel
+      </div>
+      <div style="width:1px;height:20px;background:var(--border);margin:0 .5rem;"></div>
+    </div>
+    <!-- Duplicate set for seamless loop -->
+    <div style="display:flex;align-items:center;gap:2.5rem;padding-right:2.5rem;">
+      <div style="display:flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.85rem;font-weight:600;white-space:nowrap;">
+        <img src="https://cdn.simpleicons.org/meta/00d4ff" style="width:20px;height:20px;filter:brightness(0) invert(1);opacity:.7;"> Meta Ads
+      </div>
+      <div style="display:flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.85rem;font-weight:600;white-space:nowrap;">
+        <img src="https://cdn.simpleicons.org/googletagmanager/00d4ff" style="width:20px;height:20px;"> Google Tag Manager
+      </div>
+      <div style="display:flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.85rem;font-weight:600;white-space:nowrap;">
+        <img src="https://cdn.simpleicons.org/googleanalytics/00d4ff" style="width:20px;height:20px;"> Google Analytics 4
+      </div>
+      <div style="display:flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.85rem;font-weight:600;white-space:nowrap;">
+        <img src="https://cdn.simpleicons.org/googleads/00d4ff" style="width:20px;height:20px;"> Google Ads
+      </div>
+      <div style="display:flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.85rem;font-weight:600;white-space:nowrap;">
+        <img src="https://cdn.simpleicons.org/shopify/00d4ff" style="width:20px;height:20px;"> Shopify
+      </div>
+      <div style="display:flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.85rem;font-weight:600;white-space:nowrap;">
+        <img src="https://cdn.simpleicons.org/woocommerce/00d4ff" style="width:20px;height:20px;"> WooCommerce
+      </div>
+      <div style="display:flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.85rem;font-weight:600;white-space:nowrap;">
+        <img src="https://cdn.simpleicons.org/looker/00d4ff" style="width:20px;height:20px;"> Looker Studio
+      </div>
+      <div style="display:flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.85rem;font-weight:600;white-space:nowrap;">
+        <span style="font-size:1rem;">⚡</span> Conversions API
+      </div>
+      <div style="display:flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.85rem;font-weight:600;white-space:nowrap;">
+        <span style="font-size:1rem;">🌐</span> Stape.io
+      </div>
+      <div style="display:flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.85rem;font-weight:600;white-space:nowrap;">
+        <span style="font-size:1rem;">🎯</span> Advantage+
+      </div>
+      <div style="display:flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.85rem;font-weight:600;white-space:nowrap;">
+        <span style="font-size:1rem;">📋</span> GoHighLevel
+      </div>
+      <div style="width:1px;height:20px;background:var(--border);margin:0 .5rem;"></div>
+    </div>
+  </div>
+</div>
+  
 </section>
 
 <!-- ABOUT -->
